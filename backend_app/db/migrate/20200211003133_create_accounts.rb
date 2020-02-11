@@ -3,8 +3,8 @@ class CreateAccounts < ActiveRecord::Migration[6.0]
     create_table :accounts do |t|
       t.string :name
       t.integer :zip
-      t.integer :learning
-      t.integer :teaching
+      t.string :learning
+      t.string :teaching
       t.string :bio
       t.string :email
 
