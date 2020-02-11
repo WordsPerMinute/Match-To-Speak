@@ -1,0 +1,2 @@
+class AccountSession < ApplicationRecord
+end

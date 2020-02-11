@@ -1,0 +1,2 @@
+class AccountSessionsController < ApplicationController
+end
