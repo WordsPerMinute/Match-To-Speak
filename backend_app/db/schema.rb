@@ -24,8 +24,8 @@ ActiveRecord::Schema.define(version: 2020_02_11_003249) do
   create_table "accounts", force: :cascade do |t|
     t.string "name"
     t.integer "zip"
-    t.integer "learning"
-    t.integer "teaching"
+    t.string "learning"
+    t.string "teaching"
     t.string "bio"
     t.string "email"
     t.datetime "created_at", precision: 6, null: false
@@ -33,11 +33,15 @@ ActiveRecord::Schema.define(version: 2020_02_11_003249) do
   end
 
   create_table "sessions", force: :cascade do |t|
-    t.string "learner"
-    t.string "teacher"
+    t.integer "learner_id"
+    t.integer "teacher_id"
     t.string "language"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["learner_id"], name: "index_sessions_on_learner_id"
+    t.index ["teacher_id"], name: "index_sessions_on_teacher_id"
   end
 
+  add_foreign_key "sessions", "learners"
+  add_foreign_key "sessions", "teachers"
 end
