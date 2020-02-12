@@ -21,7 +21,8 @@ class AccountsController < ApplicationController
         email: params[:email]
       )
 
-      redirect to "http://localhost:3000"
+      redirect to "http://localhost:3001"
     end
+
 
 end
