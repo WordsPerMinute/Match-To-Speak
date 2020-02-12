@@ -3,12 +3,12 @@ class AccountsController < ApplicationController
 
     def index
       @account = Account.all
-      render json: @account, include: :matches
+      render json: @account
     end
 
     def show
       @account = Account.find(params[:id])
-      render json: @account, include: :matches
+      render json: @account
     end
 
     def create
