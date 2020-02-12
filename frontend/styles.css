@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Tomorrow&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Sansita&display=swap');
+
+@@font-face {
+
+    font-family: 'Sansita', sans-serif;
+
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+label {
+  /* display: none; */
+}
+
+input, select {
+  width: 100%;
+  display: block;
+  margin-bottom: 0.5rem;
+  padding: 1rem 0.5rem;
+}
+
+
+h1 {
+  font-family: 'Sansita', sans-serif;
+  font-size: 4rem;
+}
+
+form {
+  width: 300px;
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+.main-section > * {
+  text-align: center;
+  margin-bottom: 0.25rem;
+}
+
+.add-account {
+  margin-top: 5rem;
+}
+
+#sign-up-header {
+  text-align: center;
+}
+
+#main-subtitle {
+  padding-bottom: 2rem;
+}
+
+.radio-buttons-that-show-hide {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+img {
+  padding-left: 25%;
+  padding-right: 25%
+}
+
+/* .radio-buttons-that-show-hide > .radio-button-show-hide {
+  margin-right: 4rem;
+  margin-top: 0.45rem;
+} */
