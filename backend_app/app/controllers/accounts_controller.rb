@@ -24,7 +24,8 @@ class AccountsController < ApplicationController
         learning: params[:learning],
         teaching: params[:teaching],
         bio: params[:bio],
-        email: params[:email]
+        email: params[:email],
+        photo_url: params[:photo_url]
       )
 
       redirect to "http://localhost:3001"

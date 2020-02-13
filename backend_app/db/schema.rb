@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2020_02_12_011634) do
     t.string "teaching"
     t.string "bio"
     t.string "email"
+    t.string "photo_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
