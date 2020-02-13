@@ -26,5 +26,7 @@ module BackendApp
     config.autoload_paths << Rails.root.join('lib')
 
     config.api_only = true
+
+    config.middleware.use Rack::MethodOverride
   end
 end
