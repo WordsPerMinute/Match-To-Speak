@@ -2,13 +2,19 @@ class AccountsController < ApplicationController
 
 
     def index
-      @account = Account.all
-      render json: @account
+      @accounts = Account.all
+      render json: @accounts
     end
 
     def show
       @account = Account.find(params[:id])
-      render json: @account
+      @accounts = Account.all
+
+      @teacher_list = @accounts.where(teaching: @account.learning)
+
+      @learner_list = @accounts.where(learning: @account.teaching)
+
+      render json: {user: @account, teacher_list: @teacher_list, learner_list: @learner_list}
     end
 
     def create
@@ -24,5 +30,14 @@ class AccountsController < ApplicationController
       redirect to "http://localhost:3001"
     end
 
+    def update
+      @account = Account.find(params[:id])
+      @account.update(name: @account.name, zip: params[:zip])
+
+    end
+
+    def destroy
+
+    end
 
 end

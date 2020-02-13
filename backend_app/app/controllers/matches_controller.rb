@@ -17,8 +17,7 @@ class MatchesController < ApplicationController
       language: params[:language]
 
     )
-
-    redirect to "http://localhost:3000"
   end
+
 
 end
