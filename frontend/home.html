@@ -1,30 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
-  <head>
-    <meta charset="utf-8">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Match to Speak: language learning partners</title>
     <link rel="stylesheet" href="styles.css">
-  </head>
-
-  <body>
-
-    <main class="main-section">
-      <h1>Match to Speak</h1>
-      <h3 id="main-subtitle">Get matched. Learn or teach a language!</h3>
-
-      <!-- <pre><button class="favorite styled" type="button">Create a Profile</button> or <button class="favorite styled" type="button">Login</button></pre> -->
-
-    <h2>Create a profile</h2>
-
-    </main>
-
+</head>
+<body id="homebody">
+  <main class="main-section">
+    <h1 id="home-title">Match to Speak</h1>
+    <h3 id="main-subtitle">Get matched. Learn or teach a language.</h3>
+    <h2 id="form-title">Create a profile</h2>
     <div id="add-account">
-    <form class="" action="http://localhost:3000/accounts/" method="post">
-      <div class="language-select">
-        <h4 class="language-subtitles">Learning?</h4>
-        <select data-placeholder="Learning a language?">
-          <option value="" disabled selected>Select a language to learn...</option>
+      <form class="" action="http://localhost:3000/accounts/" method="post">
+        <div class="language-select">
+          <select class="form-select" data-placeholder="Learning a language?">
+          <option value="" disabled selected>Select a language to learn</option>
           <option value="no_language">n/a</option>
           <option value="AF">Afrikaans</option>
           <option value="SQ">Albanian</option>
@@ -98,12 +89,11 @@
           <option value="VI">Vietnamese</option>
           <option value="CY">Welsh</option>
           <option value="XH">Xhosa</option>
-        </select>
-      </div>
-      <div class="language-select">
-        <h4 class="language-subtitles">Teaching?</h4>
-        <select data-placeholder="Learning a language?">
-          <option value="" disabled selected>Select a language to teach...</option>
+          </select>
+        </div>
+        <div class="language-select">
+         <select class="form-select" data-placeholder="Learning a language?">
+          <option value="" disabled selected>Select a language to teach</option>
           <option value="no_language">n/a</option>
           <option value="AF">Afrikaans</option>
           <option value="SQ">Albanian</option>
@@ -177,19 +167,18 @@
           <option value="VI">Vietnamese</option>
           <option value="CY">Welsh</option>
           <option value="XH">Xhosa</option>
-        </select>
-      </div>
-      <input type="text" name="name" value="" placeholder="Name">
-      <input type="text" name="zip" value="" placeholder="Zip code (get local matches)">
-      <input type="email" name="email" value="" placeholder="Email">
-      <input type="password" name="email" value="" placeholder="Password">
-      <textarea name="bio" rows="3" cols="29" placeholder="Write a short bio about your background or language goals"></textarea>
-      <input type="submit" name="" value="See my matches!">
-    </form>
+          </select>
+        </div>
+        <input type="text" name="name" value="" placeholder="Name">
+        <input type="text" name="zip" value="" placeholder="Zip code (get local matches)">
+        <input type="email" name="email" value="" placeholder="Email">
+        <input type="password" name="email" value="" placeholder="Password">
+        <textarea id="home-bio" name="bio" rows="3" cols="29" placeholder="Let others know more about you..."></textarea>
+        <input class="button" type="submit" name="" value="See Matches">
+      </form>
     </div>
-
+  </main>
   <script type="text/javascript" src="app.js">
   </script>
-  </body>
-
+</body>
 </html>

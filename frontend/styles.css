@@ -1,60 +1,164 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Tomorrow&display=swap');
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+//end reset
+
+
 
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
-
-@@font-face {
-
-    font-family: 'Lato', sans-serif;
-
-
-}
-
-body {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-}
+@import url('https://fonts.googleapis.com/css?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 * {
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
 }
 
+#homebody {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center; 
+  background-image: url(assets/happy.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main {
+    width: 600px;
+    height: 900px;
+    position: relative;
+    margin: 3% auto;
+    /* box-shadow: 2px 18px 70px 0px #9D9D9D; */
+    overflow: hidden;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #f2f3f5 200%);
+}
 
 label {
   /* display: none; */
 }
 
-input, select {
+input {
   width: 100%;
   display: block;
   margin-bottom: 0.5rem;
   padding: 1rem 0.5rem;
   height: 10px;
+  font-family: 'Roboto';
+  font-size: 15px;
+  margin-top: 20px;
 }
 
-
-h1 {
-  font-family: 'Lato', sans-serif;
+#home-title {
+  font-family: 'Poiret One', cursive;
   font-size: 4rem;
+  margin-top: 40px;
+  color: 	#181818;
 }
 
-h2 {
-  font-family: 'Lato', sans-serif;
-  font-size: 1.5rem;
+#main-subtitle {
+  font-family: 'Roboto';
+  font-size: 16px;
+  padding: 14px;
+  color: #60666d;
+  text-shadow: 1px 4px 6px #aba8a8;
 }
 
-h3 {
-  font-size: 1rem;
+#form-title {
+  font-family: 'Lato';
+  font-size: 20px;
+  padding: 10px;
+  color: 	#000;
+  margin-bottom: 20px;
 }
 
-h4 {
-  font-size: 0.75rem;
+.language-subtitles {
+  font-family: 'Lato';
+  font-weight: lighter;
+  font-size: 15px;
+  color: #60666d;
+  margin: 20px auto;
+  /* position: relative;
+  display: block; */
 }
 
-form {
-  width: 300px;
-  font-family: 'Open Sans', sans-serif;
+.form-select {
+  height: 35px;
+  position: relative;
+  display: block;
+  font-family: 'Caveat';
+  font-size: 25px;
+  color: #60666d;
+  margin: 10px auto;
+  border: 0.5px solid rgb(96, 102, 109, 0.4);
+}
+
+input {
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid #60666d;
+  font-size: 15px;
+  font-weight: lighter;
 }
 
 .main-section > * {
@@ -66,25 +170,10 @@ form {
   margin-bottom: 1rem;
 }
 
-.add-account {
-  margin-top: 5rem;
-}
-
-div {
-  margin: 0;
-}
-
-#add-account {
-}
 
 #main-subtitle {
   padding-bottom: 2rem;
-}
-
-img {
-  padding-left: 25%;
-  padding-right: 25%
-}
+} 
 
 .language-select {
   display: flex;
@@ -101,7 +190,45 @@ h4.language-subtitles {
   margin-right: 20px;
 }
 
-/* .radio-buttons-that-show-hide > .radio-button-show-hide {
+.radio-buttons-that-show-hide > .radio-button-show-hide {
   margin-right: 4rem;
   margin-top: 0.45rem;
-} */
+}
+
+#home-bio {
+  color: 	#181818;
+  height: 100px;
+  width: 200px;
+  margin-top: 30px;
+  border: 1px dotted #60666d;
+  font-family: 'Roboto';
+  font-size: 19px;
+  padding: 10px;
+  text-align: left;
+  font-weight: lighter;
+}
+
+.button {
+  height: 50px;
+  font-family: 'Lato';
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #000;
+  border: none;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.button:hover {
+  background-color: rgb(184, 209, 206);
+  box-shadow: 0px 15px 20px rgba(246, 162, 78, 0.4);
+  color: rgb();
+  transform: translateY(-7px);
+}
+
+
