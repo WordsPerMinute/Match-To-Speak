@@ -58,7 +58,7 @@ function makeCards(teacherDiv, teacherList, learnerDiv, learnerList){
     teacherCardDiv.classList.add('card')
     teacherCardDiv.innerHTML = `
       <h3>${teacher.name}</h3>
-      <img src="gfx/matches_avatar_sm.png">
+      <img src="${teacher.photo_url}">
       <p>${teacher.bio}</p>
       <p>Zip: ${teacher.zip}</p>
       <button type="button">Message</button>
@@ -73,7 +73,7 @@ function makeCards(teacherDiv, teacherList, learnerDiv, learnerList){
 
     learnerCardDiv.innerHTML = `
       <h3>${learner.name}</h3>
-      <img src="gfx/matches_avatar_sm.png">
+      <img src="${learner.photo_url}">
       <p>${learner.bio}</p>
       <p>Zip: ${learner.zip}</p>
       <button type="button">Message</button>

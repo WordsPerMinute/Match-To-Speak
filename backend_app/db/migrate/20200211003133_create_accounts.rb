@@ -7,6 +7,7 @@ class CreateAccounts < ActiveRecord::Migration[6.0]
       t.string :teaching
       t.string :bio
       t.string :email
+      t.string :photo_url
 
       t.timestamps
     end
