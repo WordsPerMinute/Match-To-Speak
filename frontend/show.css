@@ -131,7 +131,6 @@ table {
 	font-family: 'Caveat';
 	font-size: 40px;
 	margin-top: 80px;
-	color: 	#202020;
 	color: white;
 }
 
@@ -139,7 +138,6 @@ table {
 	font-family: 'Caveat';
 	font-size: 40px;
 	margin-top: 20px;
-	color: 	#202020;
 	color: white;
 }
 
@@ -149,8 +147,7 @@ table {
 	text-align: center;
 	padding: 20px;
 	color: 	#202020;
-	font-family: 'Special Elite', cursive;
-	color: white;
+	font-family: 'Special Elite', cursive;	
 }
 
 .match-bio {
@@ -202,6 +199,7 @@ table {
 	-webkit-box-shadow: inset 0 0 10px #000000;
 	box-shadow:         inset 0 0 10px #000000;
 	background-color:	#202020;
+	height: 300vh;
 }
 
 .card {
