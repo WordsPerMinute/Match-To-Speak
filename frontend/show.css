@@ -75,7 +75,7 @@ table {
 #main-header {
 	font-size: 5rem;
 	font-family: 'Poiret One', cursive;
-	color: #202020;	
+	color: #202020;
 }
 
 #profile-header {
@@ -141,13 +141,18 @@ table {
 	color: white;
 }
 
+#editbutton {
+	font-size: .75rem;
+	margin-top: 3rem;
+}
+
 .match-header {
 	font-size: 25px;
 	margin: 20px;
 	text-align: center;
 	padding: 20px;
 	color: 	#202020;
-	font-family: 'Special Elite', cursive;	
+	font-family: 'Special Elite', cursive;
 }
 
 .match-bio {
@@ -226,7 +231,7 @@ img {
 	padding: 20px;
 	background: -webkit-gradient(linear, left top, right top, color-stop(100%,rgba(221,221,221,1)), color-stop(50%,rgba(221,221,221,0.01)), color-stop(100%,rgba(221,221,221,1)));
 	bottom:-35px;
-	left:-10px;	
+	left:-10px;
 }
 
 .footer {
@@ -239,4 +244,3 @@ img {
 	box-sizing: border-box;
 	color: white;
 }
-

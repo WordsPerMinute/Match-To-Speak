@@ -25,24 +25,33 @@ class AccountsController < ApplicationController
         teaching: params[:teaching],
         bio: params[:bio],
         email: params[:email],
-        photo_url: params[:photo_url]
+        photo_url: "/assets/user_photo/default.jpg"
       )
 
       @accounts = Account.all
-      @redirect_account = @accounts.where(bio: params[:bio])
+      @redirect_account = @accounts.find_by(email: @account.email)
       @redirect_id = @redirect_account.id
 
-      redirect to "http://localhost:3001/show.html?user_id=#{@redirect_id}"
+      redirect_to "http://localhost:3001/show.html?user_id=#{@redirect_id}"
     end
 
     def update
-      @account = Account.find(params[:id])
-      @account.update(name: @account.name, zip: params[:zip])
+      @account = Account.find_by(email: params[:email])
+      @account.update(name: params[:name], zip: params[:zip])
 
     end
 
     def destroy
 
+    end
+
+    def login
+      @accounts = Account.all
+
+      @redirect_account = @accounts.find_by(email: params[:email])
+      @redirect_id = @redirect_account.id
+
+      redirect_to "http://localhost:3001/show.html?user_id=#{@redirect_id}"
     end
 
 end

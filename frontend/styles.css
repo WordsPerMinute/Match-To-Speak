@@ -231,5 +231,12 @@ h4.language-subtitles {
   transform: translateY(-7px);
 }
 
+#add-account, #login-form {
+	display: none;
+}
+
+#bottombutton {
+	margin-bottom: 3rem;
+}
 
 /* styles for the show page */
