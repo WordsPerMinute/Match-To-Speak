@@ -14,6 +14,10 @@ fetch(`http://localhost:3000/accounts/${user_id}`)
 
 })
 
+function updateUser(user){
+
+}
+
 
 function displayProfileLeft(user){
   let userSidebar = document.querySelector('#user_info')
@@ -27,8 +31,9 @@ function displayProfileLeft(user){
     <p id="user-zip">${user.zip}</p>
     <p id="user-bio">${user.bio}</p>
     <p id="user-email">${user.email}</p>
-    <p id="user-learning"><span class="profile-info">Learning</span> ${user.learning}</p>
-    <p id="user-teaching"><span class="profile-info"">Teaching</span> ${user.teaching}</p>
+    <p id="user-learning"><span class="profile-info">LEARNING</span> ${user.learning}</p>
+    <p id="user-teaching"><span class="profile-info"">TEACHING</span> ${user.teaching}</p>
+    <button id="editbutton" onclick="showcreate()">Edit profile</button>
   `
   userSidebar.append(userNewDiv)
   }
@@ -135,5 +140,3 @@ function makeCards(teacherDiv, teacherList, learnerDiv, learnerList){
   //
   //     selectAppend.append(powerOption)
   //   }))
-
-

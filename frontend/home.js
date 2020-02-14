@@ -1,26 +1,15 @@
-fetch("http://localhost:4000/accounts")
-  .then(response => response.json())
-  .then(response => {
 
-    console.log(response)
-    const $select = document.querySelector("select")
-    const $options =
-    response.accounts.map(account => {
-      const $option = document.createElement("option");
-      $option.textContent = account.name;
-      $option.value = account.id;
-      return $option;
-    });
-    console.log($options)
-    $options.forEach($option => {
-      $select.append($option);
-    });
 
-  });
+function showlogin() {
+  console.log("Hi")
+  let loginForm = document.querySelector('#login-form')
+  loginForm.style.display = "block"
 
-function yesnoCheck() {
-    if (document.getElementById('yesCheck').checked) {
-        document.getElementById('ifYes').style.display = '';
-    } else {
-        document.getElementById('ifYes').style.display = 'none';
-    }
+}
+
+function showcreate() {
+  console.log("Hi")
+  let loginForm = document.querySelector('#add-account')
+  loginForm.style.display = "block"
+
+}
