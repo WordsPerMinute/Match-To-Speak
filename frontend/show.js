@@ -1,6 +1,6 @@
 const params = new URLSearchParams(document.location.search)
 const user_id = params.get("user_id")
-
+const permaUser = {}
 // get entire user object to do stuff with throughout the page
 
 //populate left sidebar with user info
@@ -23,6 +23,7 @@ function displayProfileLeft(user){
   let userSidebar = document.querySelector('#user_info')
   let userNewDiv = document.createElement('div')
   userNewDiv.classList.add('profile-container')
+  userNewDiv.classList.add('user-profile-div')
 
   userNewDiv.innerHTML = `
     <h3 id="profile-header">Your profile</h3>
@@ -33,7 +34,7 @@ function displayProfileLeft(user){
     <p id="user-email">${user.email}</p>
     <p id="user-learning"><span class="profile-info">LEARNING</span> ${user.learning}</p>
     <p id="user-teaching"><span class="profile-info"">TEACHING</span> ${user.teaching}</p>
-    <button id="editbutton" onclick="showcreate()">Edit profile</button>
+    <button id="editbutton" onclick="editProfile()">Edit profile</button>
   `
   userSidebar.append(userNewDiv)
   }
@@ -94,49 +95,4 @@ function makeCards(teacherDiv, teacherList, learnerDiv, learnerList){
   })
 
 
-
 }
-
-
-
-
-//add button to pull a user's teacher matches
-// fetch(`http://localhost:3000/accounts/${user_id}`)
-//   .then(response => response.json())
-//   .then(user => {
-//     const inputUserLanguage = document.createElement('input')
-//     const selectAppend = document.querySelector('#see-teacher-matches')
-//     const searchButton = document.createElement('input')
-//
-//     inputUserLanguage.type = "hidden"
-//     inputUserLanguage.value = user.learning
-//     inputUserLanguage.name = "user_learning"
-//
-//
-//     searchButton.type = "submit"
-//     searchButton.value = "See my teacher matches!"
-//
-//     selectAppend.append(inputUserLanguage)
-//     selectAppend.append(searchButton)
-//   })
-  //
-
-
-
-
-
-  //
-
-
-  // select a power to add
-  // fetch(`http://localhost:4000/powers/`)
-  //   .then(response => response.json())
-  //   .then(powers => powers.forEach(power => {
-  //     const powerOption = document.createElement('option')
-  //     const selectAppend = document.querySelector('.selectPower')
-  //
-  //     powerOption.value = power.id
-  //     powerOption.innerText = power.name
-  //
-  //     selectAppend.append(powerOption)
-  //   }))

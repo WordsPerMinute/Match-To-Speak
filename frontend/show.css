@@ -158,6 +158,10 @@ table {
 	right: 0px;	
 }
 
+#user-profile {
+	display: block;
+}
+
 .match-header {
 	font-size: 25px;
 	margin: 20px;
