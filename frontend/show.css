@@ -59,44 +59,134 @@ table {
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-
-@@font-face {
-
-    font-family: 'Lato', 'Caveat', 'Poiret', 'Roboto', 'Satisfy', 'Raleway', 'Muli', 'Montserrat', sans-serif;
-
-}
-
-#profile-header {
-
-}
-
-#match-header {
-
-}
-
-#main-header {
-	font-size: 3rem;
-	font-family: 'Poiret One', cursive;
-	color: #181818;
-}
-
-h1, h2, h3 {
-	font-family: 'Lato';
-	font-weight: 700;
-	text-align: center;
-	padding-bottom: 2rem;
-}
-
-p {
-	font-family: 'Raleway', sans-serif;
-}
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Subrayada&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Changa&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Special+Elite&display=swap');
 
 .header {
 	height: 100px;
 	text-align: center;
-	background-color: skyblue;
-	color: #4f889f;
 	padding: 1px;
+	border: 2px dotted #202020;
+	background-color: #f4f4f4;
+	background-image: url(assets/geo-bg2.gif);
+}
+
+#main-header {
+	font-size: 5rem;
+	font-family: 'Poiret One', cursive;
+	color: #202020;	
+}
+
+#profile-header {
+	font-size: 20px;
+	font-weight: lighter;
+	/* margin: 20px; */
+	margin-bottom: 30px;
+	margin-top: 10px;
+	text-align: center;
+	/* padding: 20px; */
+	color: #F0F0F0;
+	font-family: 'Montserrat Subrayada', sans-serif;
+	text-align: left;
+	color: 	#A8A8A8;
+}
+
+#user-name {
+	font-family: 'Satisfy';
+	font-size: 40px;
+	text-align: left;
+	margin-top: 20px;
+	color: #F0F0F0;
+	text-shadow: 1px 4px 6px #aba8a8;
+}
+
+#user-bio {
+	font-family: 'Montserrat';
+	font-size: 33px;
+	margin: 30px;
+	text-align: center;
+	font-weight: lighter;
+	color:#F0F0F0;
+}
+
+#user-email {
+	display: none;
+}
+
+#user-zip {
+	font-size: 15px;
+	color: #C0C0C0;
+	padding: 5px;
+	margin-left: -10px;
+}
+.profile-info {
+	font-size: 15px;
+	font-family: 'Roboto';
+	font-weight: bold;
+	color: #F0F0F0;
+}
+
+#user-learning {
+	font-family: 'Caveat';
+	font-size: 40px;
+	margin-top: 80px;
+	color: 	#202020;
+	color: white;
+}
+
+#user-teaching {
+	font-family: 'Caveat';
+	font-size: 40px;
+	margin-top: 20px;
+	color: 	#202020;
+	color: white;
+}
+
+.match-header {
+	font-size: 25px;
+	margin: 20px;
+	text-align: center;
+	padding: 20px;
+	color: 	#202020;
+	font-family: 'Special Elite', cursive;
+	color: white;
+}
+
+.match-bio {
+	font-size: 20px;
+	font-family: 'Raleway';
+	padding: 10px;
+	margin:20px;
+}
+
+.match-zip {
+	font-size: 17px;
+	color: #909090;
+	text-shadow: grey 1px 1px;
+	margin-top: -20px;
+	padding: 5px;
+	margin-bottom: 20px;
+}
+
+.match-btt {
+	margin: 10px;
+	height: 40px;
+	width: 100px;
+	background-color:	#202020;
+	color: white;
+	font-size: 15px;
+	text-shadow: 1px 4px 6px #aba8a8;
+}
+
+.match-btt2 {
+	height: 40px;
+	width: 100px;
+	background-color:	#202020;
+	color: white;
+	font-size: 15px;
+	text-shadow: 1px 4px 6px #aba8a8;
+	margin-bottom: 40px;
 }
 
 .container div {
@@ -106,9 +196,12 @@ p {
 }
 
 .left-col {
-	background-color: #f4f4f4;
 	width: 20%;
 	float: left;
+	-moz-box-shadow:    inset 0 0 10px #000000;
+	-webkit-box-shadow: inset 0 0 10px #000000;
+	box-shadow:         inset 0 0 10px #000000;
+	background-color:	#202020;
 }
 
 .card {
@@ -118,22 +211,34 @@ p {
 }
 
 .center-col, .right-col {
-	background-color: lightgrey;
 	width: 40%;
 	float: left;
+	background-color:white;
+}
+
+.match-name {
+	font-size: 40px;
+	padding: 10px;
+	font-family: 'Satisfy'
+}
+
+img {
+	width: 40%;
+	height: 40%;
+	padding: 20px;
+	background: -webkit-gradient(linear, left top, right top, color-stop(100%,rgba(221,221,221,1)), color-stop(50%,rgba(221,221,221,0.01)), color-stop(100%,rgba(221,221,221,1)));
+	bottom:-35px;
+	left:-10px;	
 }
 
 .footer {
 	clear: both;
 	font-family: 'Lato';
-	background-color: skyblue;
+	background-color:	#202020;
 	text-align: center;
 	height: 50px;
 	padding-top: 10px;
 	box-sizing: border-box;
+	color: white;
 }
 
-img {
-	width: 25%;
-	height: 25%;
-}
