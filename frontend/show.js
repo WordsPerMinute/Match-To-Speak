@@ -18,11 +18,17 @@ fetch(`http://localhost:3000/accounts/${user_id}`)
 function displayProfileLeft(user){
   let userSidebar = document.querySelector('#user_info')
   let userNewDiv = document.createElement('div')
+  userNewDiv.classList.add('profile-container')
 
   userNewDiv.innerHTML = `
-    <h1>Your profile</h1>
-    <img src="gfx/default_avatar_sm.jpg"/>
-    <pre>Name: ${user.name}<br><br>Bio: ${user.bio}<br><br>Email: ${user.email}<br><br>Zip: ${user.zip}<br><br><br><br>Learning: ${user.learning}<br><br>Teaching: ${user.teaching}</pre>
+    <h3 id="profile-header">Your profile</h3>
+    <img src="${user.photo_url}"/>
+    <p>${user.name}</p>
+    <p>${user.bio}</p>
+    <p>${user.email}</p>
+    <p>${user.zip}</p>
+    <p>Learning: ${user.learning}</p>
+    <p>Teaching: ${user.teaching}</p>
   `
   userSidebar.append(userNewDiv)
   }
@@ -35,7 +41,7 @@ function displayMatches(user, teacherList, learnerList){
   let matchLearnersDiv = document.createElement('div')
 
   matchTeachersDiv.innerHTML = `
-    <h3>These matches are teaching ${user.learning}</h3>
+    <h2 class="match-header">These matches are teaching ${user.learning}</h2>
   `
 
   teacherList.forEach(teacher => {
@@ -44,7 +50,7 @@ function displayMatches(user, teacherList, learnerList){
 
 
   matchLearnersDiv.innerHTML = `
-    <h3>These matches are learning ${user.teaching}</h3>
+    <h2 class="match-header">These matches are learning ${user.teaching}</h2>
   `
   matchTeacherSection.append(matchTeachersDiv)
   matchLearnerSection.append(matchLearnersDiv)
@@ -60,9 +66,9 @@ function makeCards(teacherDiv, teacherList, learnerDiv, learnerList){
       <h3>${teacher.name}</h3>
       <img src="${teacher.photo_url}">
       <p>${teacher.bio}</p>
-      <p>Zip: ${teacher.zip}</p>
+      <p>${teacher.zip}</p>
       <button type="button">Message</button>
-      <button type="button">Email</button>
+      <button type="button" onclick="window.location.href = 'mailto:${teacher.email}';">Email</button>
     `
     teacherDiv.append(teacherCardDiv)
   })
@@ -75,9 +81,9 @@ function makeCards(teacherDiv, teacherList, learnerDiv, learnerList){
       <h3>${learner.name}</h3>
       <img src="${learner.photo_url}">
       <p>${learner.bio}</p>
-      <p>Zip: ${learner.zip}</p>
+      <p>${learner.zip}</p>
       <button type="button">Message</button>
-      <button type="button">Email</button>
+      <button type="button" onclick="window.location.href = 'mailto:${learner.email}';">Email</button>
     `
     learnerDiv.append(learnerCardDiv)
   })

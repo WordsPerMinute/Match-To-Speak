@@ -28,7 +28,11 @@ class AccountsController < ApplicationController
         photo_url: params[:photo_url]
       )
 
-      redirect to "http://localhost:3001"
+      @accounts = Account.all
+      @redirect_account = @accounts.where(bio: params[:bio])
+      @redirect_id = @redirect_account.id
+
+      redirect to "http://localhost:3001/show.html?user_id=#{@redirect_id}"
     end
 
     def update
