@@ -22,13 +22,13 @@ function displayProfileLeft(user){
 
   userNewDiv.innerHTML = `
     <h3 id="profile-header">Your profile</h3>
-    <img src="${user.photo_url}"/>
-    <p>${user.name}</p>
-    <p>${user.bio}</p>
-    <p>${user.email}</p>
-    <p>${user.zip}</p>
-    <p>Learning: ${user.learning}</p>
-    <p>Teaching: ${user.teaching}</p>
+    <img id="user-profile" src="${user.photo_url}"/>
+    <p id="user-name">${user.name}</p>
+    <p id="user-zip">${user.zip}</p>
+    <p id="user-bio">${user.bio}</p>
+    <p id="user-email">${user.email}</p>
+    <p id="user-learning"><span class="profile-info">Learning</span> ${user.learning}</p>
+    <p id="user-teaching"><span class="profile-info"">Teaching</span> ${user.teaching}</p>
   `
   userSidebar.append(userNewDiv)
   }
@@ -63,12 +63,12 @@ function makeCards(teacherDiv, teacherList, learnerDiv, learnerList){
     let teacherCardDiv = document.createElement('div')
     teacherCardDiv.classList.add('card')
     teacherCardDiv.innerHTML = `
-      <h3>${teacher.name}</h3>
+      <h3 class="match-name">${teacher.name}</h3>
       <img src="${teacher.photo_url}">
-      <p>${teacher.bio}</p>
-      <p>${teacher.zip}</p>
-      <button type="button">Message</button>
-      <button type="button" onclick="window.location.href = 'mailto:${teacher.email}';">Email</button>
+      <p class="match-bio">${teacher.bio}</p>
+      <p class="match-zip">${teacher.zip}</p>
+      <button class="match-btt" type="button">Message</button>
+      <button class="match-btt2" type="button" onclick="window.location.href = 'mailto:${teacher.email}';">Email</button>
     `
     teacherDiv.append(teacherCardDiv)
   })
@@ -78,12 +78,12 @@ function makeCards(teacherDiv, teacherList, learnerDiv, learnerList){
     learnerCardDiv.classList.add('card')
 
     learnerCardDiv.innerHTML = `
-      <h3>${learner.name}</h3>
+      <h3 class="match-name">${learner.name}</h3>
       <img src="${learner.photo_url}">
-      <p>${learner.bio}</p>
-      <p>${learner.zip}</p>
-      <button type="button">Message</button>
-      <button type="button" onclick="window.location.href = 'mailto:${learner.email}';">Email</button>
+      <p class="match-bio">${learner.bio}</p>
+      <p class="match-zip">${learner.zip}</p>
+      <button class="match-btt" type="button">Message</button>
+      <button class="match-btt2" type="button" onclick="window.location.href = 'mailto:${learner.email}';">Email</button>
     `
     learnerDiv.append(learnerCardDiv)
   })
@@ -135,3 +135,5 @@ function makeCards(teacherDiv, teacherList, learnerDiv, learnerList){
   //
   //     selectAppend.append(powerOption)
   //   }))
+
+
