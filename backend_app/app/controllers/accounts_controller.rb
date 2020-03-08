@@ -25,7 +25,7 @@ class AccountsController < ApplicationController
         teaching: params[:teaching],
         bio: params[:bio],
         email: params[:email],
-        photo_url: "/assets/user_photo/default.jpg"
+        photo_url: params[:photo_url] ? params[:photo_url] : "/assets/user_photo/default.jpg"
       )
 
       @accounts = Account.all

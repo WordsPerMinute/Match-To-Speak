@@ -185,6 +185,10 @@ select.language-select {
   margin-left: 20px;
 }
 
+select.form-select {
+	width: 220px;
+}
+
 h4.language-subtitles {
   width: 80px;
   margin-right: 20px;
