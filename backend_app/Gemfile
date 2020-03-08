@@ -48,3 +48,4 @@ gem 'jwt'
 
 gem 'simple_command'
 
+gem "bluecloth", "~> 2.2"

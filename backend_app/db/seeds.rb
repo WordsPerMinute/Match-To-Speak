@@ -12,7 +12,7 @@ Account.destroy_all
 
 acc1 = Account.create(name: "Tissi", zip: 23508, learning: "German", teaching: "Swahili", bio: "Just a chill chick doing my thing in the USA", email: "tissi@email.com", photo_url: "assets/user_photo/tissi.jpeg")
 acc2 = Account.create(name: "Aaron", zip: 23503, learning: "Japanese", teaching: "German", bio: "Helping all my cohortmates!", email: "aaron@email.com", photo_url: "assets/user_photo/aaron.jpeg")
-acc3 = Account.create(name: "Doug", zip: 23508, learning: "Swahili", teaching: "Japanese", bio: "My laptop stand is the shit!", email: "doug@email.com", photo_url: "assets/user_photo/doug.png")
+acc3 = Account.create(name: "Doug", zip: 23508, learning: "Swahili", teaching: "Japanese", bio: "My laptop stand is the ish!", email: "doug@email.com", photo_url: "assets/user_photo/doug.png")
 acc4 = Account.create(name: "Lillian", zip: 23508, learning: "Arabic", teaching: "French", bio: "I'm a dangerous lady in red", email: "lillian@email.com", photo_url: "assets/user_photo/lillian.png")
 acc5 = Account.create(name: "Jorge", zip: 23504, learning: "Arabic", teaching: "Japanese", bio: "I got moves!", email: "jorge@email.com", photo_url: "assets/user_photo/jorge.jpeg")
 acc6 = Account.create(name: "Mike", zip: 23511, learning: "Spanish", teaching: "Arabic", bio: "I'm very mysterious... want to know more?", email: "mike@email.com", photo_url: "assets/user_photo/mike.jpeg")
@@ -27,7 +27,7 @@ acc11 = Account.create(name: "Josh", zip: 23503, learning: "Hindi", teaching: "G
 acc11 = Account.create(name: "Jared", zip: 23508, learning: "Chinese (Mandarin)", teaching: "Hindi", bio: "I have an Eskimo suit that I made.", email: "jared@email.com", photo_url: "assets/user_photo/jared.png")
 acc11 = Account.create(name: "Rachel", zip: 23511, learning: "Chinese (Mandarin)", teaching: "Hindi", bio: "I love to run... Wanna race?", email: "rachel@email.com", photo_url: "assets/user_photo/rachel.jpeg")
 acc11 = Account.create(name: "Ben", zip: 23504, learning: "Swahili", teaching: "Chinese (Mandarin)", bio: "Be careful, I write code so sharp you'll get cut", email: "ben@email.com", photo_url: "assets/user_photo/ben.jpeg")
-acc11 = Account.create(name: "Corey", zip: 23505, learning: "Punjabi", teaching: "English", bio: "I'm a recovering douche, but still a douche. Trying to better every day!", email: "doug@email.com", photo_url: "assets/user_photo/corey.jpeg")
+acc11 = Account.create(name: "Corey", zip: 23505, learning: "Punjabi", teaching: "English", bio: "Just a simple person looking for the best cortados and breakfast burritos.", email: "doug@email.com", photo_url: "assets/user_photo/corey.jpeg")
 
 match1 = Match.create(learner: acc3, teacher: acc1, language: "Swahili")
 match2 = Match.create(learner: acc1, teacher: acc2, language: "German")
