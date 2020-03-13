@@ -1,3 +1,5 @@
+<meta name="image" property="og:image" content="https://github.com/WordsPerMinute/you-but-better/blob/master/image.png">
+
 # Match-To-Speak-App
 ## Overview
 'Match to Speak' is an app to help people learn and teach natural languages, by matchng them with others in their community.
