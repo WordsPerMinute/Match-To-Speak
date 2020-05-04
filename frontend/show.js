@@ -3,8 +3,6 @@ const user_id = params.get("user_id")
 const permaUser = {}
 // get entire user object to do stuff with throughout the page
 
-console.log("hi")
-
 //populate left sidebar with user info
 fetch(`http://localhost:3000/accounts/${user_id}`)
   .then(response => response.json())
@@ -53,7 +51,6 @@ function displayMatches(user, teacherList, learnerList){
   `
 
   teacherList.forEach(teacher => {
-    console.log(teacher.name)
   })
 
 

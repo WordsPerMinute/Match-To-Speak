@@ -24,7 +24,6 @@ function showLogin(e) {
 }
 
 function login(event){
-    console.log("loginnnng mama")
     let username = document.getElementById("username");
     let password = document.getElementById("password");
     let body = {
@@ -33,7 +32,6 @@ function login(event){
     }
 
     let jsonBody = JSON.stringify(body);
-    console.log('jsonBody', jsonBody);
 
     fetch('http://localhost:3000/authenticate', {
         method: "POST",
@@ -44,7 +42,6 @@ function login(event){
     })
         .then(response => response.json())
         .then(data => {
-            console.log(data);
             document.cookie = `auth_token=${data.auth_token}`;
             //getItems();
             window.location.href = 'http://localhost:3001/home.html';
@@ -77,18 +74,6 @@ function signUp(event) {
     })
 }
 
-// function getItems() {
-//     fetch('http://localhost:3000/items', {
-//         headers: {
-//             'Authorization': getCookie('auth_token')
-//         }
-//     })
-//     .then(response => response.json())
-//     .then(data => {
-//         console.log('data', data);
-//     })
-//     .catch(err => console.log('err', err));
-// }
 
 // Finds a cookie by name, or returns null if it doesn't exist
 function getCookie(name) {
