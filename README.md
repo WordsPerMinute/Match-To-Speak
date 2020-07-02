@@ -1,6 +1,6 @@
 # Match-To-Speak-App
 ## Overview
-'Match to Speak' is an app to help people learn and teach natural languages, by matchng them with others in their community.
+'Match to Speak' is an app to help people learn and teach natural languages, by matching them with others in their community.
 
 The app use sqlite3 db, with Rails.
 The front-end content is rendered with vanilla Javascript.
