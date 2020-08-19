@@ -26,7 +26,7 @@ This project was required to be...
 2. The Ruby version used in development was `ruby '2.6.1'`
 3. Clone this repository to your machine, bundle install, and run the rails server on port 3000 (rails s -p3000) and open the home.html file in the frontend folder
 
-## Contibutor's Guide
+## Contributor's Guide
 At this time, some additional base functionality needs to be added before it makes sense to ask for contributor help.
 
 ## Videos
